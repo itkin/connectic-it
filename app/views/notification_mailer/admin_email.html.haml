@@ -1,0 +1,11 @@
+%p
+  %strong
+    = "#{@notification.sender_name}"
+  %em
+    = "(#{@notification.sender_email})"
+  vous a posté le message suivant depuis
+
+  = link_to "connectic-it.com", root_url
+
+%blockquote
+  %p= @notification.message

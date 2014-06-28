@@ -1,0 +1,12 @@
+<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a class="close" href="<%= main_domain_root_url %>">×</a>
+    <h3 id="myModalLabel"><%= content_for(:modal_title) %></h3>
+  </div>
+  <div class="modal-body">
+    <%= yield %>
+  </div>
+  <div class="modal-footer">
+    <%= content_for(:modal_footer) %>
+  </div>
+</div>

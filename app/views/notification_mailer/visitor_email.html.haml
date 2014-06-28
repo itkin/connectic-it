@@ -1,0 +1,22 @@
+%p
+  Bonjour
+  = @notification.sender_name
+
+%p
+  Nous accusons bonne réception de votre message posté sur
+  = link_to "connectic-it.com", root_url
+  le
+  = l(@notification.created_at)
+
+%blockquote
+  %p= @notification.message
+
+%p
+  Nous revenons vers vous dans les plus brefs délais
+
+%p
+  Bien cordialement,
+  %br/
+  Connectic-IT
+  %br/
+

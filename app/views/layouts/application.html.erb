@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- favicon.ico and apple-touch-icon.png -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+
+    <%= stylesheet_link_tag :application %>
+    <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+
+    <!--<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43482875-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" class="admin">
+
+    <% if admin_namespace? and admin_signed_in? %>
+      <div class="navbar navbar-fixed-top navbar-inverse" style="position:fixed">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Admin mode</a>
+          <ul class="nav" style="padding-top:0; float: right">
+            <li class="active">
+              <%= link_to "Log out", destroy_admin_session_path, method: :delete %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
+
+    <section id="home">
+      <div class="container">
+        <div class="containerblack">
+          <ul class="homenav left">
+            <li><a href="#about" class="scrollto"><%= editable("About", "About")%></a></li>
+          </ul>
+          <ul class="homenav right">
+            <li><a href="#contact" class="scrollto">Contact</a></li>
+          </ul>
+          <h1><img src="assets/logo_big4.png"></h1>
+          <div id="slider">
+            <div class="slide"><%= editable "lead 1", "We make <strong>the finest design</strong> just for you."%></div>
+            <div class="slide"><%= editable "lead 2", "We build <strong>strong brands</strong> to get ahead." %></div>
+            <div class="slide"><%= editable "lead 3", "We aim to <strong>bigger sales</strong> and beyond."%></div>
+          </div><!-- end: #slider -->
+        </div>
+        <a href="#contact" id="arrow_down"><% editable "contact us", "See our work" %></a>
+      </div><!-- end: .containter -->
+    </section><!-- end: #home -->
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#"><img src="assets/logo.png"></a>
+          <div class="pull-right">
+            <ul class="nav">
+              <li><a href="#home"><%= editable "Home", "Home" %></a></li>
+              <li><a href="#about"><%= editable "About", "About"%></a></li>
+              <li><a href="#contact"><%= editable "Contact", "Contact"%></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="text-center"><%= editable "About", "About" %><i class="icon-about"><img src="assets/icon-about.png"></i></h2>
+        <div class="text-center lead marginer">
+          <%= editable "lead About", "Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."%>
+        </div>
+        <div class="text-center lead twocolumns1"><%= editable "about 1", "<strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
+        <div class="text-center lead twocolumns2"><%= editable "about 2", "<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
+        <div class="clear"></div>
+      </div><!-- end: .container -->
+    </section>
+    <div class="container txtblock nrtwo">
+      <div class="lead">
+        <%= editable "transition 1",  "Our team is devoted to your happiness. Integer nec odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit diozo burit burizon."%>
+        <a href="#contact" class="scrollto"><%= editable "Let`s talk.", "Let`s talk." %></a>
+      </div>
+    </div> <!-- end: container txtblock -->
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center">
+          <%= editable "Contact", "Contact" %>
+          <i class="icon-contact"><img src="assets/icon-contact.png"></i>
+        </h2>
+        <div class="text-center lead">
+          <%= editable "lead Contact", "Let`s get together and create something beautiful for you and your business. The time is now. <strong>Go for it</strong>." %>
+        </div>
+
+        <div class="row">
+          <div class="span7">
+            <%= render partial: "notifications/form" %>
+          </div>
+
+          <div class="span3">
+            <h3><%= editable "Meet us here", "Meet us here" %></h3>
+            <address>
+              <%= editable "address",
+              "Beautiful street 55<br>
+              Somewhere in Trencin<br>
+              Slovakia" %>
+            </address>
+
+            <h3><%= editable "Ask a question", "Ask a question" %></h3>
+            <p><a href="#"><%= editable "contact email", "hi@kozdo.com"%></a></p>
+
+            <!--<h3>Apply for job</h3>-->
+            <!--<p><a href="#">employme@kozdo.com</a></p>-->
+          </div>
+        </div><!-- end: .row -->
+      </div><!-- end: .container -->
+    </section><!-- end: #contact -->
+
+    <footer>
+      <a href="#home" class="scrollto">
+        <img src="assets/logo_invert.png">
+      </a>
+    </footer>
+
+
+    <% if admin_signed_in? %>
+      <%= stylesheet_link_tag asset_path "aloha/css/aloha.css" %>
+      <%= javascript_include_tag :admin %>
+    <% else %>
+      <%= javascript_include_tag :application %>
+    <% end %>
+
+    <% if admin_namespace? and not admin_signed_in? %>
+      <%= yield %>
+    <% end %>
+  </body>
+</html>

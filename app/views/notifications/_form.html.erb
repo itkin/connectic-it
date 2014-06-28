@@ -1,0 +1,8 @@
+<%= form_for @notification || Notification.new, url: notifications_path, remote: true, html: {id: "new_notification", class: "htmlform" } do |form| %>
+  <%= devise_flash_messages %>
+  <%= error_messages_for form.object %>
+  <%= form.text_field :sender_name, placeholder: "Votre nom", required: true %>
+  <%= form.email_field :sender_email, placeholder: "E-mail", required: true %>
+  <%= form.text_area :message, cols: "1", rows: "5", placeholder: "Message", required: true %>
+  <button name="send" type="submit" class="btn"><%= editable "Send", "Envoyer" %></button>
+<% end %>

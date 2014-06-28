@@ -1,0 +1,11 @@
+!!! XML
+!!!
+%html
+  %head
+    %title= t('.title')
+    = stylesheet_link_tag "emails"
+  %body
+    .content
+      = image_tag(attachments['logo.png'].url, id: "logo")
+      = yield
+

@@ -1,0 +1,44 @@
+<% content_for :modal_title do %>
+  Sign in
+<% end %>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
+  <% content_for :modal_footer do %>
+    <div class="pull-left text-left">
+      <%= render "devise/shared/links" %>
+    </div>
+    <%= f.submit "Sign in", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= render layout: "devise/shared/modal" do  %>
+    <%= devise_flash_messages %>
+    <div class="control-group">
+      <%= f.label :email, class: "control-label" %>
+      <div class="controls">
+        <%= f.email_field :email, :autofocus => true %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :password , class: "control-label" %>
+      <div class="controls">
+        <%= f.password_field :password %>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="control-group">
+        <div class="controls">
+          <label class="checkbox">
+            <%= f.check_box :remember_me %>
+            Remember me
+          </label>
+        </div>
+      </div>
+    <% end -%>
+
+  <% end %>
+
+
+<% end %>
+
+
