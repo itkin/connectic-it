@@ -43,11 +43,4 @@ $(function(){
   });
 });
 
-//  Aloha = window.Aloha || ( window.Aloha = {} );
-//  Aloha.settings = {
-//    plugins: {
-//      load: "common/ui, common/format" //"common/format, common/table, common/list, common/link, common/block, common/undo, common/contenthandler, common/paste, common/commands, common/abbr, extra/browser, extra/linkbrowser"
-//    }
-//  };
-//});
 
