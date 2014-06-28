@@ -26,3 +26,10 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding-top: 5px;
     margin-left: 5px;
 }
+.editable{
+    padding: 0 10px;
+    border: 2px solid transparent;
+}
+.editable:hover{
+    border-color: #6495ED;
+}
