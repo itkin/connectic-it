@@ -52,100 +52,100 @@
       </div>
     <% end %>
 
-
-    <section id="home">
-      <div class="container">
-        <div class="containerblack">
-          <ul class="homenav left">
-            <li><a href="#about" class="scrollto"><%= editable("About", "About")%></a></li>
-          </ul>
-          <ul class="homenav right">
-            <li><a href="#contact" class="scrollto">Contact</a></li>
-          </ul>
-          <h1><img src="<%= image_path("logo_big4.png")%>"></h1>
-          <div id="slider">
-            <div class="slide"><%= editable "lead 1", "We make <strong>the finest design</strong> just for you."%></div>
-            <div class="slide"><%= editable "lead 2", "We build <strong>strong brands</strong> to get ahead." %></div>
-            <div class="slide"><%= editable "lead 3", "We aim to <strong>bigger sales</strong> and beyond."%></div>
-          </div><!-- end: #slider -->
-        </div>
-        <a href="#contact" id="arrow_down"><%= editable "contact us", "See our work" %></a>
-      </div><!-- end: .containter -->
-    </section><!-- end: #home -->
-
-    <div class="navbar">
-      <div class="navbar-inner">
+    <%= cache_if request.url == main_domain_root_url, "home" do %>
+      <section id="home">
         <div class="container">
-          <a class="brand" href="#"><img src="<%= image_path("logo.png")%>"></a>
-          <div class="pull-right">
-            <ul class="nav">
-              <li><a href="#home"><%= editable "Home", "Home" %></a></li>
-              <li><a href="#about"><%= editable "About", "About"%></a></li>
-              <li><a href="#contact"><%= editable "Contact", "Contact"%></a></li>
+          <div class="containerblack">
+            <ul class="homenav left">
+              <li><a href="#about" class="scrollto"><%= editable("About", "About")%></a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+            <ul class="homenav right">
+              <li><a href="#contact" class="scrollto">Contact</a></li>
+            </ul>
+            <h1><img src="<%= image_path("logo_big4.png")%>"></h1>
+            <div id="slider">
+              <div class="slide"><%= editable "lead 1", "We make <strong>the finest design</strong> just for you."%></div>
+              <div class="slide"><%= editable "lead 2", "We build <strong>strong brands</strong> to get ahead." %></div>
+              <div class="slide"><%= editable "lead 3", "We aim to <strong>bigger sales</strong> and beyond."%></div>
+            </div><!-- end: #slider -->
+          </div>
+          <a href="#contact" id="arrow_down"><%= editable "contact us", "See our work" %></a>
+        </div><!-- end: .containter -->
+      </section><!-- end: #home -->
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="#"><img src="<%= image_path("logo.png")%>"></a>
+            <div class="pull-right">
+              <ul class="nav">
+                <li><a href="#home"><%= editable "Home", "Home" %></a></li>
+                <li><a href="#about"><%= editable "About", "About"%></a></li>
+                <li><a href="#contact"><%= editable "Contact", "Contact"%></a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
-    </div>
 
-    <section id="about">
-      <div class="container">
-        <h2 class="text-center"><%= editable "About", "About" %><i class="icon-about"><img src="<%=image_path("icon-about.png")%>"></i></h2>
-        <div class="text-center lead marginer">
-          <%= editable "lead About", "Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."%>
+      <section id="about">
+        <div class="container">
+          <h2 class="text-center"><%= editable "About", "About" %><i class="icon-about"><img src="<%=image_path("icon-about.png")%>"></i></h2>
+          <div class="text-center lead marginer">
+            <%= editable "lead About", "Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."%>
+          </div>
+          <div class="text-center lead twocolumns1"><%= editable "about 1", "<strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
+          <div class="text-center lead twocolumns2"><%= editable "about 2", "<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
+          <div class="clear"></div>
+        </div><!-- end: .container -->
+      </section>
+      <div class="container txtblock nrtwo">
+        <div class="lead">
+          <%= editable "transition 1",  "Our team is devoted to your happiness. Integer nec odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit diozo burit burizon."%>
+          <a href="#contact" class="scrollto"><%= editable "Let`s talk.", "Let`s talk." %></a>
         </div>
-        <div class="text-center lead twocolumns1"><%= editable "about 1", "<strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
-        <div class="text-center lead twocolumns2"><%= editable "about 2", "<strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." %></div>
-        <div class="clear"></div>
-      </div><!-- end: .container -->
-    </section>
-    <div class="container txtblock nrtwo">
-      <div class="lead">
-        <%= editable "transition 1",  "Our team is devoted to your happiness. Integer nec odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit diozo burit burizon."%>
-        <a href="#contact" class="scrollto"><%= editable "Let`s talk.", "Let`s talk." %></a>
-      </div>
-    </div> <!-- end: container txtblock -->
+      </div> <!-- end: container txtblock -->
 
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center">
-          <%= editable "Contact", "Contact" %>
-          <i class="icon-contact"><img src="<%=image_path("icon-contact.png")%>"></i>
-        </h2>
-        <div class="text-center lead">
-          <%= editable "lead Contact", "Let`s get together and create something beautiful for you and your business. The time is now. <strong>Go for it</strong>." %>
-        </div>
-
-        <div class="row">
-          <div class="span7">
-            <%= render partial: "notifications/form" %>
+      <section id="contact">
+        <div class="container">
+          <h2 class="text-center">
+            <%= editable "Contact", "Contact" %>
+            <i class="icon-contact"><img src="<%=image_path("icon-contact.png")%>"></i>
+          </h2>
+          <div class="text-center lead">
+            <%= editable "lead Contact", "Let`s get together and create something beautiful for you and your business. The time is now. <strong>Go for it</strong>." %>
           </div>
 
-          <div class="span3">
-            <h3><%= editable "Meet us here", "Meet us here" %></h3>
-            <address>
-              <%= editable "address",
-              "Beautiful street 55<br>
-              Somewhere in Trencin<br>
-              Slovakia" %>
-            </address>
+          <div class="row">
+            <div class="span7">
+              <%= render partial: "notifications/form" %>
+            </div>
 
-            <h3><%= editable "Ask a question", "Ask a question" %></h3>
-            <p><a href="#"><%= editable "contact email", "hi@kozdo.com"%></a></p>
+            <div class="span3">
+              <h3><%= editable "Meet us here", "Meet us here" %></h3>
+              <address>
+                <%= editable "address",
+                "Beautiful street 55<br>
+                Somewhere in Trencin<br>
+                Slovakia" %>
+              </address>
 
-            <!--<h3>Apply for job</h3>-->
-            <!--<p><a href="#">employme@kozdo.com</a></p>-->
-          </div>
-        </div><!-- end: .row -->
-      </div><!-- end: .container -->
-    </section><!-- end: #contact -->
+              <h3><%= editable "Ask a question", "Ask a question" %></h3>
+              <p><a href="#"><%= editable "contact email", "hi@kozdo.com"%></a></p>
 
-    <footer>
-      <a href="#home" class="scrollto">
-        <img src="<%= image_path("logo_invert.png")%>">
-      </a>
-    </footer>
+              <!--<h3>Apply for job</h3>-->
+              <!--<p><a href="#">employme@kozdo.com</a></p>-->
+            </div>
+          </div><!-- end: .row -->
+        </div><!-- end: .container -->
+      </section><!-- end: #contact -->
 
+      <footer>
+        <a href="#home" class="scrollto">
+          <img src="<%= image_path("logo_invert.png")%>">
+        </a>
+      </footer>
+    <% end %>
 
     <% if admin_signed_in? %>
       <%= stylesheet_link_tag asset_path "aloha/css/aloha.css" %>

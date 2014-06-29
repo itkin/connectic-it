@@ -15,6 +15,7 @@ module Olala
       label = Label.find_or_create_by_label params[:label]
       label.content = params[:content] if params[:content]
       label.save
+      expire_fragment 'home'
       render text: 'ok'
     end
   end

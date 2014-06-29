@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def admin_namespace?
     request.subdomain.match(/\Aadmin\Z/) != nil
   end
+
   def main_domain_root_url
     root_url host: Rails.configuration.action_mailer.default_url_options[:host]
   end
