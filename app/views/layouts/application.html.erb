@@ -52,7 +52,7 @@
       </div>
     <% end %>
 
-    <%# cache_if request.url == main_domain_root_url, "home" do %>
+    <%= cache "home", skip_digest: true do %>
       <section id="home">
         <div class="container">
           <div class="containerblack">
@@ -60,7 +60,7 @@
               <li><a href="#about" class="scrollto"><%= editable("About", "About")%></a></li>
             </ul>
             <ul class="homenav right">
-              <li><a href="#contact" class="scrollto">Contact</a></li>
+              <li><a href="#contact" class="scrollto"><%= editable("Contact", "Contact")%></a></li>
             </ul>
             <h1><img src="<%= image_path("logo_big4.png")%>"></h1>
             <div id="slider">
@@ -145,7 +145,7 @@
           <img src="<%= image_path("logo_invert.png")%>">
         </a>
       </footer>
-    <%# end %>
+    <% end %>
 
     <% if admin_signed_in? %>
       <%= stylesheet_link_tag asset_path "aloha/css/aloha.css" %>
