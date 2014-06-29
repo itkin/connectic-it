@@ -28,7 +28,7 @@ $(document).on('ajax:before', '#new_notification', function(e){
 
 $(document).on('ajax:complete', "#new_notification", function(e, xhr){
   var $data = $(xhr.responseText);
-  $data.find('.loader').addClass('in');
+  $data.find('.loader').addClass('in').find('.bar').width('40%');
   $data.replaceAll(e.target).find('.bar').width('100%').one($.support.transition.end, function(e){
     $data.find('.loader').removeClass('in');
     $data.find('.bar').width('0');
