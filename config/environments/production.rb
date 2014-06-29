@@ -88,6 +88,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = YAML.load(File.open(Rails.root.join('config/smtp.yml')))[Rails.env]
 
 
-  config.action_mailer.perform_deliveries = true
+  # config.action_mailer.perform_deliveries = true
 
 end
