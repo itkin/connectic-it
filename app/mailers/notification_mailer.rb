@@ -5,6 +5,7 @@ class NotificationMailer < ActionMailer::Base
   default from: "contact@connectic-it.com"
   layout 'email'
 
+
   def mail_with_logo args = {}, &block
     attachments.inline['logo.png'] = File.read Rails.root.join("app", "assets", "images", "logo.png")
     mail_without_logo args, &block
