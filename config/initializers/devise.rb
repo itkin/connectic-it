@@ -253,4 +253,3 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 end
 
-Devise::Mailer.default_url_options[:host] = "admin.#{ActionMailer::Base.default_url_options[:host]}"
