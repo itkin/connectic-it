@@ -85,7 +85,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'connectic-it.com' }
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = YAML.load(File.open(Rails.root.join('config/smtp.yml')))[Rails.env]
+  config.action_mailer.smtp_settings = YAML.load(File.open(Rails.root.join('config/smtp.yml')))[Rails.env].symbolize_keys!
 
 
   # config.action_mailer.perform_deliveries = true
