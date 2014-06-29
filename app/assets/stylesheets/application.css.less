@@ -26,10 +26,36 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding-top: 5px;
     margin-left: 5px;
 }
-.editable{
-    padding: 0 10px;
+
+body.admin{
+  .editable{
+    padding: 0 5px;
     border: 2px solid transparent;
-}
-.editable:hover{
+  }
+  .editable:hover{
     border-color: #6495ED;
+  }
+}
+
+#new_notification{
+  position: relative;
+  .loader{
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    border-radius: 4px;
+    &.in{
+      display: block;
+    }
+    .progress{
+      position: absolute;
+      bottom: 0;
+      left: 55%;
+      width: 120px;
+      margin-bottom: 10px;
+    }
+  }
 }

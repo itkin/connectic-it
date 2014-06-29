@@ -37,7 +37,7 @@
 <!--//-->
     <!--&lt;!&ndash;</script>&ndash;&gt;-->
   </head>
-  <body data-spy="scroll" data-target=".navbar" class="admin">
+  <body data-spy="scroll" data-target=".navbar" class="<%= admin_signed_in? ? 'admin' : '' %>">
 
     <% if admin_namespace? and admin_signed_in? %>
       <div class="navbar navbar-fixed-top navbar-inverse" style="position:fixed">

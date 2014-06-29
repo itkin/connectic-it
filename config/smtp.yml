@@ -1,0 +1,8 @@
+development:
+  address: "ssl0.ovh.net"
+  port: 587
+  domain: "connectic-it.com"
+  user_name: "xxx@connectic-it.com"
+  password: "xxx"
+  authentication: "plain"
+  enable_starttls_auto: true

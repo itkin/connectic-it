@@ -22,9 +22,17 @@
 //= require grid.js
 
 
+$(document).on('ajax:before', '#new_notification', function(e){
+  $(e.target).find('.loader').addClass('in').find('.bar').width('40%')
+});
 
 $(document).on('ajax:complete', "#new_notification", function(e, xhr){
-  $(e.target).replaceWith(xhr.responseText)
+  var $data = $(xhr.responseText);
+  $data.find('.loader').addClass('in');
+  $data.replaceAll(e.target).find('.bar').width('100%').one($.support.transition.end, function(e){
+    $data.find('.loader').removeClass('in');
+    $data.find('.bar').width('0');
+  });
 });
 
 $(function() {

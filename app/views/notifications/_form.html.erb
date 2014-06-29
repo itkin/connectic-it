@@ -5,4 +5,9 @@
   <%= form.email_field :sender_email, placeholder: "E-mail", required: true %>
   <%= form.text_area :message, cols: "1", rows: "5", placeholder: "Message", required: true %>
   <button name="send" type="submit" class="btn"><%= editable "Send", "Envoyer" %></button>
+  <div class="fade loader">
+    <div class="progress progress-striped active">
+      <div class="bar" style="width: 0;"></div>
+    </div>
+  </div>
 <% end %>
