@@ -12,9 +12,9 @@
 
     <!-- favicon.ico and apple-touch-icon.png -->
     <link rel="shortcut icon" href="<%= path_to_image('favicon.ico')%>">
-    <link rel="apple-touch-icon" href="<%= path_to_image('apple-touch-icon-57x57-precomposed.png')%>">
-    <link rel="apple-touch-icon" sizes="72x72" href="<%= path_to_image('apple-touch-icon-72x72-precomposed.png')%>">
-    <link rel="apple-touch-icon" sizes="114x114" href="<%= path_to_image('apple-touch-icon-114x114-precomposed.png')%>">
+    <!--<link rel="apple-touch-icon" href="<%= path_to_image('apple-touch-icon-57x57-precomposed.png')%>">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="<%= path_to_image('apple-touch-icon-72x72-precomposed.png')%>">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="<%= path_to_image('apple-touch-icon-114x114-precomposed.png')%>">-->
 
     <%= stylesheet_link_tag :application %>
     <%= csrf_meta_tags %>
@@ -62,7 +62,7 @@
             <ul class="homenav right">
               <li><a href="#contact" class="scrollto"><%= editable("Contact", "Contact")%></a></li>
             </ul>
-            <h1><img src="<%= image_path("logo_big4.png")%>"></h1>
+            <h1><img src="<%= image_path("LOGO_170x150_YELLOW.png")%>"></h1>
             <div id="slider">
               <div class="slide"><%= editable "lead 1", "We make <strong>the finest design</strong> just for you."%></div>
               <div class="slide"><%= editable "lead 2", "We build <strong>strong brands</strong> to get ahead." %></div>
@@ -70,13 +70,14 @@
             </div><!-- end: #slider -->
           </div>
           <a href="#contact" id="arrow_down"><%= editable "contact us", "See our work" %></a>
+          <!--<a href="#contact" id="arrow_down"><%#= editable "contact us", "See our work" %></a>-->
         </div><!-- end: .containter -->
       </section><!-- end: #home -->
 
       <div class="navbar">
         <div class="navbar-inner">
           <div class="container">
-            <a class="brand" href="#"><img src="<%= image_path("logo.png")%>"></a>
+            <a class="brand" href="#"><img src="<%= image_path("LOGO_HEADER.png")%>"></a>
             <div class="pull-right">
               <ul class="nav">
                 <li><a href="#home"><%= editable "Home", "Home" %></a></li>
@@ -142,7 +143,7 @@
 
       <footer>
         <a href="#home" class="scrollto">
-          <img src="<%= image_path("logo_invert.png")%>">
+          <img src="<%= image_path("LOGO_FOOTER_90x79_WHITE.png")%>">
         </a>
       </footer>
     <% end %>
